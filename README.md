@@ -33,4 +33,8 @@ This project is create from Module 14 from UTA Bootcamp Class, We are using back
   
   If you have any questions about the repo, open an issue or contact me directly at pochobs@gmail.com. You can find more of my work at [Pochobs](https://github.com/Pochobs/).
   
+  ## Deployment
+  
+  https://fast-escarpment-47514.herokuapp.com   ---> Heroku Link
+  https://github.com/pochobs/Blogz              ---> Github Link
   
