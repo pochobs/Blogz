@@ -1,12 +1,15 @@
-function logout() {
-  fetch("/api/user/logout", {
-    method: "post",
-    headers: { "Content-Type": "application/json" }
-  })
-    .then(function() {
-      document.location.replace("/");
-    })
-    .catch(err => console.log(err));
-}
-
-document.querySelector("#logout-link").addEventListener("click", logout);
+async function logout() {
+    console.log('button clicked');
+    const response = await fetch('/api/user/logout', {
+      method: 'post',
+      headers: { 'Content-Type': 'application/json' }
+    });
+  
+    if (response.ok) {
+      document.location.replace('/');
+    } else {
+      alert(response.statusText);
+    }
+  }
+  
+  document.querySelector('.logout').addEventListener('click', logout);

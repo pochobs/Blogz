@@ -1,52 +1,46 @@
-<div class="post">
-  <article class="card">
-    <div class="card-header flex-row justify-space-between">
-      <h2>{{post.title}}</h2>
-      <div>
-        Posted by {{post.User.username}} on {{format_date post.createdAt}}
-      </div>
+    <article class="post">
+        <div class="card">
+            <div class="card-header flex-row justify-space-between">
+            <h3>{{post.title}}</h3>
+            <h4>
+                Posted by {{post.User.username}} on {{format_date post.created_at}}.
+            </h4>
+            </div>
+            <div class="card-body">
+            <p> {{post.blog_content}} </p>
+            </div>
+        </div> 
+        
+    </article>
+
+{{#if loggedIn}}
+    <form class="comment-form">
+  <div>
+    <textarea name="comment-body"></textarea>
+  </div>
+
+  <div>
+    <button class='btn' type="submit">add comment</button>
+  </div>
+</form>
+{{/if}}
+
+<div class="comments">
+    <br>
+    <h3 class= "dark"> Comments: </h3>
+    <br>
+  {{#each post.comments}}
+  <section class="comment card">
+    <div class="meta card-header">
+      {{User.username}} on {{format_date created_at}}
     </div>
-    <div class="card-body">
-      {{post.body}}
+    <div class="card-body text">
+      {{comment_text}}
     </div>
-  </article>
+  </section>
+  {{/each}}
 
-  {{#if post.Comments}}
-    <section class="card">
-      <div class="card-header">
-        <h3>Comments</h3>
-      </div>
-
-      <div class="card-body">
-        {{#each post.Comments}}
-          <div>
-            <p>
-              {{body}}
-            </p>
-            <p>
-              &mdash; {{User.username}}, {{format_date createdAt}}
-            </p>
-          </div>
-        {{/each}}
-      </div>
-    </section>
-  {{/if}}
-
-  <form id="new-comment-form" class="card">
-    <div class="card-header">
-      <h3>Add New Comment</h3>
-    </div>
-
-    <div class="card-body">
-      <input type="hidden" name="post-id" value="{{post.id}}" />
-
-      <label class="form-label" for="comment-body">Comment</label>
-
-      <textarea name="comment-body" class="form-input"></textarea>
-
-      <button type="submit" class="btn">Submit</button>
-    </div>
-  </form>
 </div>
-
+{{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
+{{/if}}

@@ -1,37 +1,37 @@
-# Blogz
+# Just Tech Blog
 
-  ## Description
-  
-This project is create from Module 14 from UTA Bootcamp Class, We are using backend express to create a application that you can write posts in a dashboard.
+## Description: 
 
-  ## Table of Contents 
-  
-  * [Installation](#installation)
-  
-  * [Usage](#usage)  
+This application was built to allow users to blog about anything tech related. Upon page load, the user may read see a list of any current blog posts that have been saved to the site. Users my create a secure login on the site. Once they have done so, they will have the capability to see their own dashboard and to create, edit, and comment on their own posts. By clicking any of these links, the user is able to read the blog and the comments that have been left on the blog. By clicking on the Dashboard link in the navigation, the user is able to see all of their own published blogs. From here, they have the ability to edit or delete their blogs. 
 
-  * [Technologies](#technologies)  
-    
-  * [Questions](#questions)
-  
-  ## Installation
-  
-  To install necessary dependencies, run the following command:
-  
-  ```
-  npm i
-  
-  npm start
-  ```
-  ## Technologies
-  Express, express-handlebars, sequelize, connect-session-sequelize, express-session, dotenv, mysql2
-  
-   ## Questions
-  
-  If you have any questions about the repo, open an issue or contact me directly at pochobs@gmail.com. You can find more of my work at [Pochobs](https://github.com/Pochobs/).
-  
-  ## Deployment
-  
-  https://fast-escarpment-47514.herokuapp.com   ---> Heroku Link
-  https://github.com/pochobs/Blogz              ---> Github Link
-  
+## Table of Contents
+* [Built With](#builtwith)
+* [Screenshots](#screenshots)
+* [Contributing](#contributing)
+* [Questions](#questions)
+
+## Built With
+* MySQL
+* Sequelize
+* dotenv
+* bcrypt
+* Handlebars.js
+* JawsDB
+
+## Screenshots
+
+* Homepage View
+Shows all posts
+<img src="./utils/images/homepage.png">
+
+* Login Page 
+Also has option to sign up instead
+<img src="./utils/images/login.png">
+
+* Single Post View
+When clicking on a post, you'll be routed to this view. In ths view, you can see and add comments to the post.
+<img src="./utils/images/single-post.png">
+
+* Dashboard View
+When logged in, you can view your dashboard that shows your posts. Here you have the ability to edit your posts and add comments.
+<img src="./utils/images/dashboard.png">
