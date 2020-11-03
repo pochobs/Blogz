@@ -4,7 +4,7 @@
   "description": "blog site",
   "main": "server.js",
   "scripts": {
-    "test": "test"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
